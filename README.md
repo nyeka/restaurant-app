@@ -1,3 +1,31 @@
+This is my New Project based on dicoding course 
+
+
+Preview : 
+
+![Detail page ](https://user-images.githubusercontent.com/89840911/159846199-8cec2fc8-1997-4365-9167-5218edfa4bd5.jpeg)
+
+
+
+
+
+
+![Detail page](https://user-images.githubusercontent.com/89840911/159846265-4991bc2d-9eda-4274-b3e1-ea121247917e.jpeg)
+
+
+
+
+
+![Home Page](https://user-images.githubusercontent.com/89840911/159846320-535a5451-164b-45f9-8151-533747d96ff7.jpeg)
+
+
+
+
+
+
+
+
+
 # restaurant
 
 A new Flutter project.
