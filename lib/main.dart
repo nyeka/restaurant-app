@@ -12,7 +12,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(initialRoute: Myhomepage.routeName, routes: {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      initialRoute: Myhomepage.routeName, routes: {
       Myhomepage.routeName: (context) => const Myhomepage(),
     });
   }
@@ -24,25 +26,31 @@ class Myhomepage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: SafeArea(
           child: FutureBuilder<String>(
             future: DefaultAssetBundle.of(context)
                 .loadString('assets/restoran.json'),
             builder: (context, snapshot) {
+              final List<Restaurant> restaurants =
+                  parseRestaurant(snapshot.data);
               if (snapshot.connectionState == ConnectionState.waiting) {
                 return const Center(
                   child: CircularProgressIndicator(),
                 );
-              } 
-              final List<Restaurant> restaurants =
-                  parseRestaurant(snapshot.data);
-              return ListView.builder(
-                itemCount: restaurants.length,
-                itemBuilder: (context, index) {
-                  return _buildRestaurantsitem(context, restaurants[index]);
-                },
-              );
+              } else if (snapshot.data != null) {
+                return ListView.builder(
+                  itemCount: restaurants.length,
+                  itemBuilder: (context, index) {
+                    return _buildRestaurantsitem(context, restaurants[index]);
+                  },
+                );
+              } else {
+                return const Center(
+                  child: Text('Error please relog'),
+                );
+              }
             },
           ),
         ),
@@ -63,7 +71,7 @@ Widget _buildRestaurantsitem(BuildContext context, Restaurant restaurants) {
           borderRadius: BorderRadius.circular(6),
           child: Image.network(
             restaurants.pictureId,
-            width: mediawidth * 0.17,
+            width: mediawidth * 0.19,
             scale: 3.4,
             fit: BoxFit.cover,
           ),
