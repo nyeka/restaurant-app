@@ -10,7 +10,7 @@ Preview :
 ![Home Page](https://user-images.githubusercontent.com/89840911/159846320-535a5451-164b-45f9-8151-533747d96ff7.jpeg)
 
 
-![WhatsApp Image 2022-03-24 at 12 01 26 PM](https://user-images.githubusercontent.com/89840911/159846545-0bf2fad9-0aea-4390-b929-fa2d86273419.jpeg)
+![Detail](https://user-images.githubusercontent.com/89840911/159846545-0bf2fad9-0aea-4390-b929-fa2d86273419.jpeg)
 
 
 
